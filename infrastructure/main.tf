@@ -7,7 +7,7 @@ module "vpc" {
   version = "v0.0.1"
   name             = "${var.name}"
   vpc_cidr         = "${var.vpc_cidr}"
-  environment      = "${var.env}"
+  environment      = "${var.environment}"
   cost_center      = "${var.cost_center}"
   tag_owner        = "${var.tag_owner}"
   project          = "${var.project}"
