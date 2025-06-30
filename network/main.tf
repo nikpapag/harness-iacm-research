@@ -1,6 +1,24 @@
-provider "aws" {
-  region = "eu-west-1"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+    harness = {
+      source = "harness/harness"
+    }
+    helm = {
+      source = "hashicorp/helm"
+      version = "2.9.0"
+    }
+  }
 }
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "${var.region}"
+}
+
 
 module "network" {
   source  = "app.harness.io/nPn2kgT-QbOtRRgymY-DJQ/network/aws"
