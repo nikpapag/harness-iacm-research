@@ -1,19 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-    harness = {
-      source = "harness/harness"
-    }
-    helm = {
-      source = "hashicorp/helm"
-      version = "2.9.0"
-    }
-  }
-}
-
 # Configure the AWS Provider
 provider "aws" {
   region = "${var.region}"
